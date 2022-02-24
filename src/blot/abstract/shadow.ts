@@ -16,11 +16,12 @@ class ShadowBlot implements Blot {
   // @ts-ignore
   scroll: Parent;
 
-  // Hack for accessing inherited static methods
+  // 便于访问继承的静态方法
   get statics(): any {
     return this.constructor;
   }
 
+  // 创建真实的dom节点
   static create(value: any): Node {
     if (this.tagName == null) {
       throw new Registry.ParchmentError('Blot definition missing tagName');

@@ -41,7 +41,7 @@ export enum Scope {
   BLOCK_ATTRIBUTE = BLOCK & ATTRIBUTE, // 1001
   INLINE_ATTRIBUTE = INLINE & ATTRIBUTE, // 0101
 
-  ANY = TYPE | LEVEL,
+  ANY = TYPE | LEVEL, // 1111
 }
 
 export function create(input: Node | string | Scope, value?: any): Blot {
